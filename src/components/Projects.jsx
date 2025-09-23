@@ -19,7 +19,7 @@ const Projects = () => {
                 return (
                   <div key={project.id} className={`flex flex-col gap-10 ${project.id % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
                     <div className={` ${project.id % 2 === 0 ? "w-full lg:basis-2/3": "w-full lg:basis-2/3 "}  `}>
-                      <video className='w-full h-ful' src= {project.image} autoPlay preload = 'none' loop muted playsInline ></video>
+                      <video className='w-full h-ful'  autoPlay  loop muted playsInline > <source src= {project.image} type='/video/mp4' /> </video>
                     </div>
                     <div className={` ${project.id % 2 === 0 ? "w-full lg:basis-1/2 lg:px-3": "w-full lg:basis-1/2 lg:px-3 "} flex flex-col gap-3`}>
                       <h1 className='text-white font-bold text-lg mt- lg:mt-0 font-jakarta'>{project.name}</h1>

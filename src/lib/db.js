@@ -24,7 +24,6 @@ export const projects = [
       technologies: [ {title: "ReactJS", icon: reactIcon  }, {title: "NodeJS", icon: NodejsIcon  }, {title: "MongoDB", icon: mongoDBIcon }, {title: "Express", icon: expressIcon  }, {title: "Tailwind CSS", icon: tailwindIcon  }, {title: "Framer Motion", icon: framerIcon }],
       liveLink: "https://mern-app-dp5x.vercel.app/",
       features: [ 'Admin Panel: Manage employees, departments, roles, leave requests, and notifications.','Recruitment & Onboarding: Streamlined hiring workflow with candidate tracking, interview scheduling, and onboarding checklists.', 'Performance & Feedback: Monitor KPIs, collect feedback, and generate reports for employee performance evaluation.'],
-    
     },
     {
       id: 2,
@@ -64,4 +63,7 @@ export const projects = [
 
     // },
   ];
+
+
+
 

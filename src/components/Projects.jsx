@@ -18,8 +18,9 @@ const Projects = () => {
               {projects.map((project)=> {
                 return (
                   <div key={project.id} className={`flex flex-col gap-10 ${project.id % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-                    <div className={` ${project.id % 2 === 0 ? "w-full lg:basis-2/3": "w-full lg:basis-2/3 "}  `}>
-                      <video className='w-full h-ful'  autoPlay  loop muted playsInline > <source src= {project.image} type='/video/mp4' /> </video>
+                    <div className={` ${project.id % 2 === 0 ? "w-full h-full lg:basis-2/3": "w-full   lg:basis-2/3 "}  `}>
+                      <video className='w-full h-full'  autoPlay  loop muted playsInline  preload='none' > <source src={project?.image}  type='video/mp4' /> </video>
+                      {/* <video className='w-full h-full' src= {project.image} autoPlay loop muted playsInline ></video> */}
                     </div>
                     <div className={` ${project.id % 2 === 0 ? "w-full lg:basis-1/2 lg:px-3": "w-full lg:basis-1/2 lg:px-3 "} flex flex-col gap-3`}>
                       <h1 className='text-white font-bold text-lg mt- lg:mt-0 font-jakarta'>{project.name}</h1>
@@ -53,6 +54,7 @@ const Projects = () => {
             </section>
         </section>
       </section>
+      
     </>
   )
 }

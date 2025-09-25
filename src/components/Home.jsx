@@ -10,7 +10,6 @@ const Home = () => {
     const work = {avail:'Available For Work', ready:'or Ready for Projects!'}
     const details = {name: "I'm Olorunwa", description: "I craft seamless and responsive" , description2: "that transform ideas into engaging digital experiences"}
 
-   
     const defaultAnimation = {
       hidden: { opacity: 0, y: 50 },
       visible: { opacity: 1, y: 0, transition: { duration: 1.4  }},

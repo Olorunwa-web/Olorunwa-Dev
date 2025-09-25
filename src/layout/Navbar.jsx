@@ -15,7 +15,7 @@ const Navbar = () => {
               <span className='text-white text-base  font-averta-demo'>olorunwamoliki@gmail.com</span>
             </div>
             <div>
-              <button className='font-jakarta font-semibold text-sm  text-white px-4 py-2 border-1 border-white rounded-full'>Let's Ta/k!</button>
+              <a href="mailto:olorunwamoliki@gmail.com" className='font-jakarta font-semibold text-sm  text-white px-4 py-2 border-1 border-white rounded-full'>Let's Ta/k!</a>
             </div>
          </div>
         </section>

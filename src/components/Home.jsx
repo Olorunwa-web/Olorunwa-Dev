@@ -11,13 +11,17 @@ const Home = () => {
     const details = {name: "I'm Olorunwa", description: "I craft seamless and responsive" , description2: "that transform ideas into engaging digital experiences"}
 
     const defaultAnimation = {
-      hidden: { opacity: 0, y: 50 },
+      hidden: { opacity: 0, y: 90 },
       visible: { opacity: 1, y: 0, transition: { duration: 1.4  }},
     }
 
   return (
     <>
-      <section className='relative mx-auto mt-11 lg:mt-17 w-full max-w-screen-xl md:px-20 px-4'>
+      <Motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3, delay: 1 }}
+      className='relative mx-auto mt-11 lg:mt-17 w-full max-w-screen-xl md:px-20 px-4'>
         <section className='w-full flex flex-col lg:flex-row justify-between items-center gap-10'>
             <Motion.div   className='basis-2/3 w-full flex flex-col gap-9'>
                 <div className='flex flex-col gap-4'>
@@ -42,7 +46,7 @@ const Home = () => {
                </div>
             </div>
         </section>
-      </section>
+      </Motion.section>
     </>
   )
 }

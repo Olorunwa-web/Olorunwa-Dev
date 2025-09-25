@@ -27,7 +27,7 @@ const Footer = () => {
                            ))}
                        </div>
                     </div>
-                    <span className='text-white text-sm font-normal font-jakarta'>&copy; 2024 Olorunwa Moliki. All rights reserved.</span>
+                    <span className='text-white text-sm font-normal font-jakarta'>&copy; 2025 Olorunwa Moliki. All rights reserved.</span>
                 </div>
             </div>
         </section>

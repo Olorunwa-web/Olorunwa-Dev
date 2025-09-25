@@ -21,14 +21,14 @@ const Projects = () => {
 
                 return (
                   <div key={project.id} className={`flex flex-col gap-10 ${project.id % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-                    <Motion.div  className={`relative group overflow-x-hidden ${isEven ? "w-full h-full lg:basis-2/3": "w-full   lg:basis-2/3 "}  `}>
+                    <Motion.div  className={`relative group overflow-x-hidden ${isEven ? " w-full h-full lg:basis-2/3": "w-full   lg:basis-2/3 "}  `}>
                       <Motion.video 
                        initial={{ opacity: 0, x: isEven ? 100 : -100 }}
-                     whileInView={{ opacity: 1, x: 0 }}
-                     transition={{ duration: 1.4, ease: [0, 0.71, 0.2, 1.01] }}
-                     viewport={{ once: true }}
-                      className='w-full h-full '  autoPlay  loop muted playsInline  preload='none'> <source src={project?.image}  type='video/mp4' /> </Motion.video>
-                      <a href={project.liveLink} target='_blank' rel='noreferrer' className={`absolute top-3 ${isEven ? "-left-9 hidden lg:block" : "-right-9 hidden lg:block"} `}>
+                       whileInView={{ opacity: 1, x: 0 }}
+                       transition={{ duration: 1.4, ease: [0, 0.71, 0.2, 1.01] }}
+                       viewport={{ once: true }}
+                       className='w-full h-ful '  autoPlay  loop muted playsInline  preload='none'> <source src={project?.image}  type='video/mp4' /> </Motion.video>
+                       <a href={project.liveLink} target='_blank' rel='noreferrer' className={` hover:text-[#1BF273] text-white absolute top-3 ${isEven ? " -left-9 hidden lg:block" : " -right-9 hidden lg:block"} `}>
                           <Icon2/>
                         </a>
                     </Motion.div>
@@ -54,9 +54,7 @@ const Projects = () => {
                           </div>
                          ))}
                       </div>
-                      <div>
-                        
-                      </div>
+                     
                     </div>
                   </div>
                 )

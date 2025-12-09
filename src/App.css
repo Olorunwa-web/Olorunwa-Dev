@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 @font-face{
   font-family: 'averta-demo';
@@ -21,3 +24,150 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+.font-lexend {
+  font-family: "Lexend", sans-serif;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+
+/* App.css */
+#root > .app-content {
+  position: relative;
+  z-index: 1;
+}
+canvas { z-index: 0; position: fixed; left: 0; top: 0; }
+
+
+/* .hamburger {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: white;
+  &.is-sm {
+    font-size: 1rem;
+  }
+
+  &.is-md {
+    font-size: 1.5rem;
+  }
+
+  &.is-lg {
+    font-size: 2rem;
+  }
+
+  &-line {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 0.125em;
+    border-radius: 0.125em;
+    background: currentColor;
+    transition: inherit;
+
+    &:nth-child(1) {
+      top: 0.125em;
+
+      .hamburger.is-active &,
+      .w-nav-button.w--open & {
+        top: 50%;
+        transform: translateY(-50%) rotateZ(-135deg);
+      }
+    }
+
+    &:nth-child(2) {
+      top: 0.438em;
+
+      .hamburger.is-active &,
+      .w-nav-button.w--open & {
+        right: 50%;
+        width: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 0.75em;
+      width: 0.625em;
+
+      .hamburger.is-active &,
+      .w-nav-button.w--open & {
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%) rotateZ(135deg);
+      }
+    }
+  }
+} */
+
+
+.hamburger {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hamburger.is-sm {
+  font-size: 1rem;
+}
+
+.hamburger.is-md {
+  font-size: 1.5rem;
+}
+
+.hamburger.is-lg {
+  font-size: 2rem;
+  color: white;
+}
+
+.hamburger-line {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 0.1em;
+  border-radius: 0.125em;
+  background: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* --- Line 1 --- */
+.hamburger-line:nth-child(1) {
+  top: 0.125em;
+}
+
+.hamburger.is-active .hamburger-line:nth-child(1),
+.w-nav-button.w--open .hamburger-line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotateZ(-135deg);
+}
+
+/* --- Line 2 --- */
+.hamburger-line:nth-child(2) {
+  top: 0.438em;
+}
+
+.hamburger.is-active .hamburger-line:nth-child(2),
+.w-nav-button.w--open .hamburger-line:nth-child(2) {
+  right: 50%;
+  width: 0;
+}
+
+/* --- Line 3 --- */
+.hamburger-line:nth-child(3) {
+  top: 0.75em;
+  width: 0.625em;
+}
+
+.hamburger.is-active .hamburger-line:nth-child(3),
+.w-nav-button.w--open .hamburger-line:nth-child(3) {
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%) rotateZ(135deg);
+}

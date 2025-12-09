@@ -12,6 +12,44 @@ import mongoDBIcon from '../assets/mongodb-icon.svg';
 import expressIcon from '../assets/icon-express.svg';
 import emailjsIcon from '../assets/EmailJS_idNWN6e1tz_1.svg';
 
+// ==================================================================
+
+export const nav = [
+  {
+    id: 1,
+    header: 'Home',
+    path: 'home'
+  },
+  {
+    id: 2,
+    header: 'About',
+    path: 'aboutme'
+  },
+  {
+    id: 3,
+    header: 'Project',
+    path: 'projects'
+  }
+]
+
+export const navmobile = [
+  {
+    id: 1,
+    header: 'home',
+    path: 'home'
+  },
+  {
+    id: 2,
+    header: 'about',
+    path: 'aboutme'
+  },
+  {
+    id: 3,
+    header: 'project',
+    path: 'projects'
+  }
+]
+
 // =============================Projects Data============================
 
 export const projects = [

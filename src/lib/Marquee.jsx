@@ -54,37 +54,37 @@ const Marquee = () => {
 
         const  LowerMarquee = [
             {
-                id: 1, icon: typescriptIcon, name: 'TypeScript'
-            },
-            {
-                id: 2, icon: reactIcon, name: 'ReactJS'
-            },
-            {
-                id: 3, icon: javasciptIcon, name: 'JavaScript'
-            },
-            {
-                id: 4, icon: EmailJS, name: 'EmailJS'
-            },
-            {
-                id: 5, icon: figmaIcon, name: 'Figma'
-            },
-            {
-                id: 6, icon: sassIcon, name: 'Sass'
-            },
-            {
-                id: 7, icon: GithudIcon, name: 'GitHub'
-            },
-            {
-                id: 8, icon: tailwindIcon, name: 'Tailwind CSS'
-            },
-            {
-                id: 9, icon: vercelIcon, name: 'Vercel'
+                id: 1, icon: framerIcon, name: 'Framer Motion'
             },
             { 
-                id: 10, icon: GitIcon, name: 'Git'
+                id: 2, icon: GitIcon, name: 'Git'
             },
             {
-                id: 11, icon: framerIcon, name: 'Framer Motion'
+                id: 3, icon: vercelIcon, name: 'Vercel'
+            },
+            {
+                id: 4, icon: javasciptIcon, name: 'JavaScript'
+            },
+            {
+                id: 5, icon: reactIcon, name: 'ReactJS'
+            },
+            {
+                id: 6, icon: EmailJS, name: 'EmailJS'
+            },
+            {
+                id: 7, icon: typescriptIcon, name: 'TypeScript'
+            },
+            {
+                id: 8, icon: sassIcon, name: 'Sass'
+            },
+            {
+                id: 9, icon: tailwindIcon, name: 'Tailwind CSS'
+            },
+            {
+                id: 10, icon: GithudIcon, name: 'GitHub'
+            },
+            {
+                id: 11, icon: figmaIcon, name: 'Figma'
             },
         ]
 

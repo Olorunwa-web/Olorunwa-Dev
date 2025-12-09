@@ -46,8 +46,8 @@ const Animation = () => {
                 duration: 1.4,
                 ease: [0, 0.71, 0.2, 1.01],
             }}
-        className='w-full max-w-screen-lg mx-auto px-4 md:px-20'>
-            <div className='flex w-full h-full  flex-col lg:flex-row justify-between gap-10'>
+        className='w-full max-w-screen-lg mx-auto px-5 md:px-20'>
+            <div className='flex w-full h-full flex-col lg:flex-row justify-between gap-10'>
                 <div className='basis-1/2 w-full '> 
                     <img src= {animateImg} alt="" className='w-full object-cover h-full' />
                 </div>

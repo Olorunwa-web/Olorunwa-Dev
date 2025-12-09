@@ -15,7 +15,7 @@ const UseScroll = () => {
           right: 0,
           height: 4,
           originX: 0,
-          backgroundColor: "#2CE1C6",
+          backgroundColor: "#2E86D0",
           zIndex: 99
      }}
       >

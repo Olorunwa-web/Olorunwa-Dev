@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import { Outlet } from 'react-router-dom';
 import Navbar  from '../layout/Navbar';
 import AboutMe from '../components/AboutMe';
@@ -10,11 +10,9 @@ import Footer from '../components/Footer';
 
 const Parent = () => {
 
-
-
   return (
     <>
-    <Motion.section className='relative'>
+    <Motion.section className='relative z-10'>
         <Navbar/>
         <Outlet/>
         <AboutMe/>

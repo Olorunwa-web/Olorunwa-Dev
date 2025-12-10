@@ -1,69 +1,76 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef} from 'react'
 import animateImg from '../assets/code.gif';
 import GithubIcon from '../assets/github-white-icon.svg';
 import instagramicon from '../assets/instagram-2016-logo-svgrepo-com.svg';
 import mediumicon from '../assets/medium-icon-svgrepo-com.svg';
 import linkedinicon from '../assets/linkedin-svgrepo-com (2).svg';
 import { motion as Motion } from 'framer-motion';
+import { createSwapy } from "swapy";
 
 
 
 const Animation = () => {
 
-    const icons = [
-          {id:1, icon: linkedinicon,link :'https://www.linkedin.com/in/olorunwa-moliki-1bb8a11ab/'},
-          {id:2, icon: GithubIcon,link :'https://github.com/Olorunwa-web'},
-          {id:3, icon: mediumicon,link :'https://medium.com/@olorunwamoliki'},
-          {id:4, icon: instagramicon,link :'https://www.instagram.com/olly.lab2?igsh=MWt5eTQydHlhdGd4Yw%3D%3D&utm_source=qr'},
-        ]
-
-    const [order, setOrder] = useState(icons);
-
-    const spring = {
-    type: "spring",
-    damping: 20,
-    stiffness: 300,
-  };
-
-
-  function shuffle(array) {
-    return [...array].sort(() => Math.random() - 0.5);
-  }
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setOrder(shuffle(order)), 1000);
-    return () => clearTimeout(timeout);
-  }, [order]);
+    if (!containerRef.current) return;
+
+    const swapy = createSwapy(containerRef.current, {
+      animation: "spring",
+    });
+
+    return () => {
+      swapy?.destroy?.();
+    };
+  }, []);
+
 
 
   return (
     <>
       <section className='mt-34 pb-10 md:mt-39'> 
-        <Motion.section 
-         initial={{ opacity: 0, scale: 0.4 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-                duration: 1.4,
-                ease: [0, 0.71, 0.2, 1.01],
-            }}
-        className='w-full max-w-screen-lg mx-auto px-5 md:px-20'>
+        <section 
+        className='w-full max-w-screen-xl mx-auto px-5 md:px-10'>
             <div className='flex w-full h-full flex-col lg:flex-row justify-between gap-10'>
                 <div className='basis-1/2 w-full '> 
                     <img src= {animateImg} alt="" className='w-full object-cover h-full' />
                 </div>
                 <div className='basis-1/2 w-full'>
-                  <div className='flex flex-wrap justify-between gap-5'>
-                    {order.map((socials) => {
-                        return (
-                            <Motion.a href={socials.link} layout key={socials.id} transition={spring} target='_blank' rel='noreferrer' className= {`flex justify-center rounded-2xl items-center border border-[#222222] w-[46%] md:w-[47%] h-30 ${socials.id === 1 ? 'bg-[#0077B7]' : socials.id === 2 ? 'bg-[#000000]' : socials.id === 3 ? 'bg-[#FFFFFF]' :  socials.id === 4 ? 'bg-[#C21975]': ""} transition-all duration-300 hover:scale-105`}>
-                                <img src= {socials.icon} alt="" className='w-7 h-7' />
-                            </Motion.a>
-                         )
-                     })}
+                  <div ref={containerRef} className='flex flex-col gap-5'>
+
+                    {/* Medium */}
+                    <div data-swapy-slot = 'a' >
+                      <div data-swapy-item="a" className='grid grid-col-1 flex bg-[#FFFFFF] py-10 rounded-xl justify-center items-center'>
+                        <img src={mediumicon} alt="" className='w-9 md:w-10' />
+                     </div>
+                    </div>
+
+                    <div className=' grid grid-cols-2 sm:grid-cols-3 gap-5'>
+                      {/* Instagram */}
+                      <div data-swapy-slot = 'b' className='col-span-1 sm:col-span-2'>
+                        <div data-swapy-item="b" className=' bg-[#C21975] py-10 rounded-xl flex justify-center items-center'>
+                          <img src={instagramicon} alt="" className='w-9 md:w-10' />
+                       </div>
+                      </div>
+
+                      {/* Linkedin */}
+                      <div data-swapy-slot = 'c' className='col-span-1'>
+                         <div data-swapy-item="c" className='  bg-[#0077B7] rounded-xl py-10 flex justify-center items-center'>
+                         <img src= {linkedinicon} alt="" className='w-9 md:w-10' />
+                        </div>
+                      </div>
+                    </div>
+                    {/* github */}
+                    <div data-swapy-slot="d" >
+                      <div data-swapy-item="d" className=' grid grid-col-1 bg-[#000000] py-10 rounded-xl flex justify-center items-center'>
+                        <img src={GithubIcon} alt="" className='w-9 md:w-10' />
+                     </div>
+                    </div>
                    </div>
                 </div>
             </div>
-        </Motion.section>
+        </section>
       </section>
     </>
   )

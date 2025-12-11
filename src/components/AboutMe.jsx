@@ -3,7 +3,7 @@ import Marquee from '../lib/Marquee';
 import { motion as Motion } from 'framer-motion';
 import  arrowright from '../assets/arrowright.svg';
 import Swipes from '../components/Swipes';
-
+import olorunwaCV from '../assets/OLORUNWA.CV2.pdf'
 
 
 const AboutMe = () => {
@@ -32,7 +32,7 @@ const AboutMe = () => {
                   </button>
                   </div>
                   <div>
-                  <button className = 'bg-[#2B2B2B] py-2 ps-2 pr-4 flex items-center gap-3 rounded-full '>
+                  <button  onClick={() => window.open(olorunwaCV, "_blank")} className = 'bg-[#2B2B2B] py-2 ps-2 pr-4 flex items-center gap-3 rounded-full '>
                     <div className = 'bg-[#2E86D0] w-8 h-8 flex justify-center items-center rounded-full'>
                       <img src={arrowright} alt="" className='w-5' />
                     </div>
@@ -43,7 +43,6 @@ const AboutMe = () => {
               </div>
               <div className='w-full lg:w-1/2'>
                   <Swipes/>
-                {/* <img src={unspalsh} alt=""  className='w-ful rounded-xl aspect-3/2 object-cover h-full'/> */}
               </div>
             </div>
             <div className='mt-18 md:mt-24' >
